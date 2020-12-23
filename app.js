@@ -8,7 +8,7 @@ for(let i=0; i<splitText.length; i++) {
 }
 
 let char = 0;
-let timer = setInterval(onTick, 100);
+let timer = setInterval(onTick, 50);
 
 function onTick() {
     const span = text.querySelectorAll('span')[char];
