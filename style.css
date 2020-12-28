@@ -10,50 +10,99 @@ body{
     background: #111;
 }
 
-section{
-    position: relative;
-    padding: 100px;
-    
-}
-
-.header{
+nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000000;
-    display: flex;
-    justify-content: flex-end;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.header .logo img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.logo {
+    letter-spacing: 3px;
+    color: black;
+    z-index: 1000;
 }
 
+.nav-links {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
 
-.header .toggle img{
-    max-width: 30px; 
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger {
+    display: none;
     cursor: pointer;
 }
 
-
-.header .social-media {
-    display: flex;
-    justify-content: space-between;
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 50%;
+    }
 }
 
-.header .social-media li {
-    list-style: none;
-    margin: 0 10px;
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        height: 30vh;
+        width: 100%;
+        top: 8vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-120%);
+        transition: transform 0.5s ease-in-out;
+        z-index: -1000;
+    }
+
+    .burger {
+        display: block;
+        z-index: 1000;
+    }
 }
 
-.header .media-icon {
-    width: 30px;
-    filter: invert(1);
+.nav-active {
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.toggle .line1{
+    transform: translateX(3px);
+}
+
+.toggle .line2{
+    transform: translateX(5px);
+}
+
+.toggle .line3{
+    transform: translateX(0px);
+}
+
+section{
+    position: relative;
+    padding: 100px;   
+    z-index: -1000;
 }
 
 .banner{

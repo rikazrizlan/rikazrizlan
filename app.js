@@ -24,3 +24,15 @@ function complete() {
     clearInterval(timer);
     timer = null;
 }
+
+//responsive nav bar
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+
+//toggle nav
+burger.addEventListener('click', function(){
+    nav.classList.toggle('nav-active');
+
+    //burger animation
+    burger.classList.toggle('toggle');
+});
