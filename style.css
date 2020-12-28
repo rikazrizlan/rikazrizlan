@@ -19,6 +19,7 @@ nav {
     min-height: 8vh;
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
+    z-index: 10000;
 }
 
 .logo {
@@ -101,8 +102,7 @@ nav {
 
 section{
     position: relative;
-    padding: 100px;   
-    z-index: -1000;
+    padding: 100px;
 }
 
 .banner{
@@ -113,6 +113,7 @@ section{
     justify-content: center;
     align-items: center;
 }
+
 .banner:before {
     content: '';
     position: absolute;
@@ -152,6 +153,7 @@ section{
     border-radius: 20px;
     transition: 0.3s;
 }
+
 .btn:hover{
     color: #fff;
     background: #191919;
