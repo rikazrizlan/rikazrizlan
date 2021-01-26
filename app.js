@@ -47,10 +47,10 @@ function animatedForm() {
             const nextForm = parent.nextElementSibling;
             
             //Check for validation
-            if(input.type == "text" && validateUser(input)) {
-                nextSlide(parent, nextForm);
-            } else if(input.type === "email" && validateEmail(input)) {
-                nextSlide(parent, nextForm);
+            if(!input.type == "text" && !validateUser(input)) {
+                parent.style.animation = "shake 0.5s ease";
+            } else if(!input.type === "email" && !validateEmail(input)) {
+                parent.style.animation = "shake 0.5s ease";
             } else if(!input.type === "password" && !validateUser(input)) {
                 nextSlide(parent, nextForm);
             } else {
