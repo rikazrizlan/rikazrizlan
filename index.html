@@ -141,21 +141,21 @@
 
     <section class="banner3" id="contact">
         <img src="./Images/techy.jpg" class="fit-bg" alt="">
-        <form netlify>
+        <form data-netlify="true">
             <div class="field-name">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Name" required>
+                <input type="text" name="name" placeholder="Name" required>
                 <i class="fas fa-arrow-down"></i>
             </div>
             <div class="field-email innactive">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="Email" required>
+                <input type="email" placeholder="Email" name="email" required>
                 <i class="fas fa-arrow-down"></i>
             </div>
             <div class="field-password innactive">
                 <i class="fas fa-envelope"></i>
-                <textarea type="text" placeholder="Message" required></textarea>
-                <i class="fas fa-arrow-down"></i>
+                <textarea placeholder="Message" name="message" required></textarea>
+                <button type="submit" name="submit"><i class="fas fa-arrow-down"></i></button>
             </div>
             <div class="field-finish innactive">
                 <i class="fas fa-smile"></i>

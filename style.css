@@ -479,6 +479,7 @@ form {
     flex: 1;
     height: 100%;
     outline: none;
+    text-align: center;
 }
 
 .field-password textarea {
@@ -489,6 +490,11 @@ form {
     outline: none;
     text-align: center;
     margin-top: 30px;
+}
+
+.field-password button {
+    background: none;
+    border: none;
 }
 
 div.innactive {
